@@ -287,6 +287,8 @@ a{
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-right: 10px;
+    margin: 10 px;
+    padding: 10px;
 }
 
 .search-bar button {
