@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyFusion</title>
+    <link rel="icon"  href="./images/contacts (1).png">
+    <link href="style.css"  rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+</head>
+<body id="hero">
+  <nav class="bg-transparent drop-shadow-lg hover:drop-shadow-xl fixed w-full z-50 top-0 left-0 ">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between py-4">
+            <!-- Logo -->
+    <a href="#" class="text-xl font-bold text-black">FlyFusion</a>
+    <input class="hidden lg:block bg-transparent rounded-xl shadow-lg px-2 py-3 w-72 text-black placeholder:text-black" id="Search" type="text" placeholder="Search destinations, flights, and more....">
+
+    <!-- Hamburger Button (visible on small screens) -->
+    <button id="hamburger-btn" class="lg:hidden p-2" aria-label="Toggle navigation menu">
+        <!-- Hamburger SVG -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+             <!-- navbar links -->
+            <div class=" lg:flex space-x-8 py-4 hidden" id="navbar-links">
+                <ul class="flex space-x-8 ">
+                    <li><a href="" class= "text-black text-lg hover:text-blue-300 px-3 py-2">Home</a></li>
+                    <li><a href="" class="text-black text-lg hover:text-blue-300">Hotel</a></li>
+                    <li><a href="" class="text-black text-lg hover:text-blue-300">Flight</a></li>
+                    <li><a href="" class="text-black text-lg hover:text-blue-300">Train</a></li>
+                    <li><a href="" class="text-black text-lg hover:text-blue-300">Travel </a></li>
+                     <li><a href="login.html" class="text-black text-lg hover:text-blue-300">Login</a></li>
+                    <li><a href="signup.html" class="text-black text-lg hover:text-blue-300">Register</a></li> 
+                   
+                   
+                    <li><a href="" class="text-black text-lg hover:text-blue-300">Contact</a></li>
+                </ul>
+                
+            </div>
+            <!-- hamburger button -->
+ 
+        </div>
+    </nav>  
+    <!-- hero section --> 
+    <section id="hero-section" class="h-screen  w-screen flex-col   bg-[url('images\maldives.webp')] bg-cover bg-center relative text-gray-900 " >
+       <div  class=" absolute top-8 right-8 text-right text-gray-900 ">
+        <h1 class="animate-slideIn font-bold text-4xl sm:text-5xl md:text-7xl hover:text-blue-400 transition duration-300 mt-8 sm:mt-6 md:mt-8">Welcome to FlyFusion</h1>
+        <p class="text-2xl sm:text-xl font-semibold mt-8 leading-relaxed animate-slideIn hover:text-blue-500 transition duration-300 ">Embark on a journey of unparalleled convenience and comfort with FlyFusion.</p>
+        <button class="hover:text-blue-500  focus:ring-yellow-700 mt-6 sm:mt-8 md:mt-8 px-6 py-2 bg-yellow-500 text-slate-500 rounded-lg animate-bounce items-center  justify-items-center  text-center place-content-center ">Get Started</button>
+       </div> 
+       <div class=" bottom-20 left-20 flex flex-col justify-center text-center items-center mt-8 bg-white rounded-2xl shadow-2xl p-4 sm:p-6 w-full max-w-prose ">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4 hover:text-yellow-300">What is your destination?</h2>
+        <form class="flex flex-col md:flex-row items-center space-y-4 md:space-y-4 md:space-x-4">
+            <div class="flex flex-col justify-center">
+            <input class="flex-1 px-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400" type="text" aria-label="Enter your destination" placeholder="Enter city, airport, or landmark" >
+            
+            <div class="flex flex-row  ">
+                <div class=" flex flex-col text-center justify-center pt-4  ">
+                    <h1 class="text-center font-semibold  text-base hover:text-yellow-300 ">From</h1>
+                    
+                    <input class=" m-3 col-span-1 px-4 py-3 border-2 border-gray-900 rounded-xl  focus:ring-2 focus:ring-blue-400" type="date" min="2024-12-18" placeholder=" Start Date" aria-label="Select start date">
+                </div>
+                <div class="flex flex-col text-center justify-center pt-4">
+                    <h1 class="text-center font-semibold text-base hover:text-yellow-300 ">To</h1>
+                    <input class=" m-3 col-span-1 px-4 py-3 border-2 border-gray-900 rounded-xl  focus:ring-2 focus:ring-blue-400" type="date" min="2024-12-18" placeholder="=End Date" aria-label="  Select end start">
+                </div>
+            </div>
+            <button  id="submit-btn"  type="submit" class=" mt-5 px-6 py-3 bg-yellow-500 rounded-lg text-white font-semibold hover:bg-yellow-900 transition duration-300 focus:ring-yellow-400 ">
+                <span class="spinner hidden" id="spinner"></span>
+                Search
+            </button>
+        </div>
+        </form>
+       </div>
+    </section>
+
+
+    <!-- cards section -->
+
+<!-- search bar-->
+ <section class="bg-white">
+ <section class="search-bar bg-white p-3 py-6">
+   <input type="text" id="destination-search" placeholder="Seach for destinations or tours...">
+   <button onclick="searchDestination()">Search</button>
+ </section>
+<!--   featured Destinations -->
+<section class="featured-destinations bg-white">
+<h2 class="font-semibold text-lg px-3 i flex justify-start items-center">Featured Destinations</h2>
+<div class="destination-card">
+   <img src="./images/iceland.jpg" alt="ice land">
+   <h3>Iceland</h3>
+   <p>"A land of majestic waterfalls, striking glaciers, and the enchanting Northern Lights."</p>
+   <button class="cta-btn">Explore More</button>
+</div>
+<div class="destination-card">
+   <img src="./images/korea2.webp" alt="southkorea">
+   <h3>South Korea</h3>
+   <p>"South Korea: A vibrant blend of ancient palaces, modern cities, and breathtaking mountain landscapes."</p>
+   <button class="cta-btn">Explore More</button>
+</div>
+<div class="destination-card">
+   <img src="./images/japan.jpg" alt="Tokyo">
+   <h3>Tokyo</h3>
+   <p>"Tokyo: A dazzling metropolis where cutting-edge technology meets rich tradition and timeless culture."</p>
+   <button class="cta-btn">Explore More</button>
+</div>
+</section>
+
+<!-- Tour Packages -->
+<section class="tour-packages">
+   <h2 class="font-semibold text-lg px-3 flex justify-start items-center">Popular Tour Packages</h2>
+   <div class="package-card">
+       <h3>European Adventure</h3>
+       <p>Visit Paris, Rome, and Barcelona in one trip.</p>
+       <button class="cta-btn">Book Now</button>
+   </div>
+   <div class="package-card">
+       <h3>Tropical Escapes</h3>
+       <p>Relax and unwind in Bali and Phuket.</p>
+       <button class="cta-btn">Book Now</button>
+   </div>
+   <div class="package-card">
+       <h3>Asian Discovery</h3>
+       <p>Explore Tokyo, Kyoto, and Seoul.</p>
+       <button class="cta-btn">Book Now</button>
+   </div>
+</section>
+<section class="deals-banner">
+   <h2>Travel Deals & Offers</h2>
+   <p>Exclusive discounts for your next adventure!</p>
+   <button class=""cta-btn>
+       <a href="./signup.html">Sign Up for More
+       </a>
+       </button>
+ </section>
+ 
+</section>
+ 
+
+    <!-- About us -->
+     <section id="about-us" class="bg-white py-16 px-6 md:px-16 text-center ">
+        <div class="text-gray-900 container mx-auto ">
+            <h2 class="font-bold text-4xl text-gray-900 mb-6 hover:text-slate-700  transition duration-300">Who We Are</h2>
+            <p class=" text-lg text-gray-600 mb-8  leading-relaxed">At FlyFusion, we're passionate about transforming the way you travel. Our mission is to simplify and enhance every aspect of your travel journey—from finding the perfect flight to booking the ideal hotel or planning unforgettable adventures. With a focus on convenience, affordability, and customer satisfaction, FlyFusion is your go-to travel companion for a seamless, stress-free experience.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center bg-white shadow-2xl rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a4 4 0 10-8 0v2m6 0a6 6 0 11-12 0 6 6 0 0112 0zm-6 5v2m0 4h.01m-.011-4h.01" />
+                    </svg>
+                    <h3 class="font-semibold text-xl  mb-2 hover:text-blue-600 transition duration-300">Personalilized Travel</h3>
+                    <p class="text-gray-600">Tailored options to suit your unique perferences and needs.</p>
+                </div>
+                <div class="text-center bg-white shadow-2xl rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 16h.01M8 12h.01M16 8h.01M12 8h.01M12 4h.01M20 12v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2m4 4h.01M20 8H4M20 4H4" />
+                    </svg>
+                    <h3 class="font-semibold text-xl mb-2 hover:text-blue-600">Innovative Technology</h3>
+                    <p class="text-gray-600">Streamlining your travel experience with advanced tools.</p>
+                </div>
+                <diV class="text-center bg-white shadow-2xl rounded-xl">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m0 0h-3m3 0h3m-3-8h3m-3 0h-3" />
+                    </svg>
+                    <h3 class="font-semibold text-xl mb-2 hover:text-blue-600">Sustainability</h3>
+                    <p class="text-gray-600">Committed to eco-friendly options for a greener planet.</p>
+                </diV>
+                <div class="text-center bg-white shadow-2xl rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 9l4 4-4 4m-6 0H7a4 4 0 01-4-4V7a4 4 0 014-4h4m9 4h.01" />
+                    </svg>
+                    <h3 class="font-semibold text-xl mb-2 hover:text-blue-600">24/7 Support</h3>
+                    <p class="text-gray-600">Always here to assist you with any travel needs.</p>
+                </div>
+            </div>
+        
+        <div class="mt-12">
+            <h3 class="text-2xl font-semibold  mb-4">Join the FlyFusion Experience Today</h3>
+            <p class="text-lg text-gray-600 mb-6">Start your journey with us and explore the world in a whole new way. We’re committed to making every aspect of your trip effortless and enjoyable.</p>
+            <a href="" class="inline-block px-8 py-3 bg-yellow-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">Get Started.</a>
+        </div>
+
+        </div>
+     </section>
+     <section class="bg-white">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202405.65365228345!2d126.80932880888535!3d37.56476155040291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2sSeoul%2C%20South%20Korea!5e0!3m2!1sen!2sin!4v1731980177823!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+     <footer class="bg-yellow-300  animate-footer py-8">
+        <div class="container mx-auto px-6">
+          <div class="flex justify-center space-x-8 mb-6">
+            <!-- Instagram Icon -->
+            <a href="#" class="social-icon hover:text-blue-500" aria-label="Instagram">
+              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.328 3.608 1.304.975.976 1.242 2.242 1.304 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.328 2.633-1.304 3.608-.976.975-2.242 1.242-3.608 1.304-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.328-3.608-1.304-.975-.975-1.242-2.242-1.304-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.328-2.633 1.304-3.608.975-.976 2.242-1.242 3.608-1.304 1.266-.058 1.646-.07 4.85-.07m0-2.163C8.756 0 8.332.012 7.052.07 5.78.128 4.581.327 3.548 1.36 2.515 2.393 2.316 3.592 2.258 4.864.2 8.332 0 12 0 12s.012 3.668.07 5.052c.058 1.272.327 2.471 1.36 3.504 1.033 1.033 2.232 1.232 3.504 1.29 1.384.058 1.808.07 5.066.07s3.668-.012 5.052-.07c1.272-.058 2.471-.327 3.504-1.36 1.033-1.033 1.232-2.232 1.29-3.504.058-1.384.07-1.808.07-5.066s-.012-3.668-.07-5.052c-.058-1.272-.327-2.471-1.36-3.504C19.471.327 18.272.128 17 .07 15.716.012 15.292 0 12 0z"/>
+              </svg>
+            </a>
+      
+            <!-- Facebook Icon -->
+            <a href="#" class="social-icon hover:text-blue-500" aria-label="Facebook">
+              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M22.675 0H1.325C.594 0 0 .593 0 1.326v21.348C0 23.407.594 24 1.325 24H12.82v-9.293H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.657-4.788 1.325 0 2.463.099 2.793.143v3.24l-1.918.001c-1.505 0-1.796.715-1.796 1.763v2.311h3.586l-.467 3.622h-3.119V24h6.116c.73 0 1.325-.593 1.325-1.326V1.326C24 .593 23.407 0 22.675 0z"/>
+              </svg>
+            </a>
+      
+            <!-- Twitter Icon -->
+            <a href="#" class="social-icon hover:text-blue-500" aria-label="Twitter">
+              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M24 4.557a9.83 9.83 0 01-2.828.775A4.93 4.93 0 0023.337 3.1a9.864 9.864 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482c-4.086-.205-7.71-2.165-10.141-5.144A4.822 4.822 0 001.671 6.15c0 1.697.869 3.197 2.188 4.075a4.902 4.902 0 01-2.229-.616v.06c0 2.373 1.693 4.354 3.946 4.803a4.935 4.935 0 01-2.224.085c.63 1.965 2.445 3.393 4.604 3.432A9.867 9.867 0 010 19.54a13.9 13.9 0 007.548 2.212c9.055 0 14.01-7.504 14.01-14.01 0-.213-.005-.425-.014-.637A10.025 10.025 0 0024 4.557z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="mb-6">
+            <ul class="flex justify-center space-x-6 text-gray-500 text-sm ">
+                <li><a href="#" class="hover:text-orange-500">Home</a></li>
+                <li><a href="#" class="hover:text-orange-500">About Us</a></li>
+                <li><a href="#" class="hover:text-orange-500">Contact</a></li>
+                <li><a href="#" class="hover:text-orange-500">Destinations</a></li>
+                <li><a href="#" class="hover:text-orange-500">Terms & Conditions</a></li>
+                <li><a href="#" class="hover:text-orange-500">Privacy Policy</a></li>
+            </ul>
+          </div>
+      
+          <p class=" text-center text-sm text-gray-500">&copy;2024 FlyFusion. All rights reserved.</p>
+          <p class=" text-center text-sm text-gray-500">Privacy Policy | Terms of Service</p>
+        </div>
+      </footer>
+      
+</body>
+</html>

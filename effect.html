@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+    <title> Tap to enter-FlyFusion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="effect.css" rel="stylesheet">
+</head>
+<body class="bg-zinc-900 text-white h-screen w-screen">
+  <div id="tap-screen" class="relative  h-screen w-screen flex">
+    <div class="absolute inset-0 background-lines">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="hidden lg:block"></div>
+        <div class="hidden lg:block"></div>
+        <div class="hidden lg:block"></div>
+    </div>
+    
+
+    <div class="z-10 flex flex-col w-full h-full items-center justify-center">
+        <h1 class="text-4xl  font-extrabold lg:text-6xl tracking-wider text-white hover:text-emerald-300 animate-float">
+            Flyfusion
+        </h1>
+        <p class="mt-4 text-lg lg:text-2xl text-gray-300 hover:text-emerald-400 animate-pulse-slow">
+             Start your journey
+        </p>
+    </div>
+  </div>  
+
+  <script>
+    const tapScreen = document.getElementById("tap-screen");
+    const redirectToLanding = () => {
+        window.location.href= "index.html";
+    };
+
+    tapScreen.addEventListener("click",redirectToLanding);
+    tapScreen.addEventListener("touchstart",redirectToLanding);
+
+  </script>
+</body>
+</html>
+   
+
