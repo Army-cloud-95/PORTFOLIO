@@ -3,43 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> FlyFusion login/sign up page</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="srcipt.js">
-    
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="background">
-    <div class="back">
-        <div class="login-container">
-            <h1 class="header"> TAKE OFF!(login)</h1>
-        
-            <form class="login-class">
-                <div class="input-group">
-                    <label for="email" class="text">Email</label>
-                    <input type="email" id="email" placeholder="Adventure Awaits!">
-                </div>
-                <div class="input-group">
-                    <label for="password" class="text">Password</label>
-                    <input type="password" id="password" placeholder="Adventure Awaits">
-                </div>
-                <div class="button">
-                 <button type="submit" class="login-button">Login</button>
-               
-                    <button  type="submit" class="login-button">
-                        <a href="./signup.html">
-                        Sign up!
-                        </a>
-                    </button>
-                
-                    <button type="submit" class="login-button">
-                        <a href="./password.html">
+<body class="font-sans bg-gray-100 text-gray-900">
 
-                        Forget Password
-                    </a></button>
-                
+    <!-- Login Section -->
+    <section class="h-screen bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center ">
+        <div class="bg-white p-8 rounded-xl shadow-lg max-w-sm w-full  ">
+            <h2 class="text-2xl font-semibold text-center text-gray-800">Login</h2>
+            <form action="#" method="POST" class="mt-8 space-y-6">
+                <!-- Username -->
+                <div>
+                    <label for="username" class="block text-lg text-gray-700">Username</label>
+                    <input type="text" id="username" name="username" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your username" required>
+                </div>
+
+                <!-- Password -->
+                <div>
+                    <label for="password" class="block text-lg text-gray-700">Password</label>
+                    <input type="password" id="password" name="password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password" required>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Login</button>
+                </div>
+
+                <!-- Forgot Password Link -->
+                <div class="text-center text-sm text-gray-600">
+                    <a href="./password.html" class="hover:text-blue-600">Forgot password?</a>
                 </div>
             </form>
+
+            <!-- Sign Up Link -->
+            <div class="mt-4 text-center">
+                <p class="text-sm text-gray-600">Don't have an account? 
+                    <a href="./signup.html" class="text-blue-600 hover:text-blue-700">Sign Up</a>
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
+
 </body>
 </html>

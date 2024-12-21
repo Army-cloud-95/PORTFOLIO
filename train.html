@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100 text-gray-900">
+
+    
+    <header class="bg-blue-500 text-white p-5 flex justify-between items-center">
+        <div class="text-2xl font-bold">
+            <h1>Train Booking</h1>
+        </div>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#book" class="hover:text-gray-300">Book Now</a></li>
+                <li><a href="#trains" class="hover:text-gray-300">Trains</a></li>
+                <li><a href="./contact.html" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Booking Section -->
+    <section id="book" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold text-blue-500">Book Your Train Ticket</h2>
+            <form action="#" method="POST" class="mt-8 space-y-6">
+                <div class="flex flex-col sm:flex-row sm:space-x-4">
+                    <div class="w-full sm:w-1/2">
+                        <label for="from" class="block text-lg text-gray-700">From:</label>
+                        <input type="text" id="from" name="from" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Enter departure city" required>
+                    </div>
+                    <div class="w-full sm:w-1/2">
+                        <label for="to" class="block text-lg text-gray-700">To:</label>
+                        <input type="text" id="to" name="to" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Enter destination city" required>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:space-x-4">
+                    <div class="w-full sm:w-1/2">
+                        <label for="date" class="block text-lg text-gray-700">Travel Date:</label>
+                        <input type="date" id="date" name="date" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                    </div>
+                    <div class="w-full sm:w-1/2">
+                        <label for="class" class="block text-lg text-gray-700">Class:</label>
+                        <select id="class" name="class" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                            <option  class="hover:text-blue-500"  value="economy">Economy</option>
+                            <option  class="hover:text-blue-500" value="business">Business</option>
+                            <option  class="hover:text-blue-500" value="first-class">First Class</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-green-500">Find Trains</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Available Trains Section -->
+    <section id="trains" class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold text-blue-500">Available Trains</h2>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-2xl hover:scale-105">
+                    <h3 class="text-xl font-semibold">Train A</h3>
+                    <p class="mt-2 text-gray-600">Departure: 10:00 AM</p>
+                    <p class="text-gray-600">Arrival: 2:00 PM</p>
+                    <button class="mt-4 py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Book Now</button>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-2xl hover:scale-105">
+                    <h3 class="text-xl font-semibold">Train B</h3>
+                    <p class="mt-2 text-gray-600">Departure: 12:00 PM</p>
+                    <p class="text-gray-600">Arrival: 4:00 PM</p>
+                    <button class="mt-4 py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Book Now</button>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-2xl hover:scale-105">
+                    <h3 class="text-xl font-semibold">Train C</h3>
+                    <p class="mt-2 text-gray-600">Departure: 3:00 PM</p>
+                    <p class="text-gray-600">Arrival: 7:00 PM</p>
+                    <button class="mt-4 py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold text-blue-500">Contact Us</h2>
+            <form action="#" method="POST" class="mt-8 space-y-4">
+                <label for="name" class="block text-left text-lg text-gray-700">Name:</label>
+                <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                <label for="email" class="block text-left text-lg text-gray-700">Email:</label>
+                <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                <label for="message" class="block text-left text-lg text-gray-700">Message:</label>
+                <textarea id="message" name="message" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+                <button type="submit" class="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-500 text-white py-6 text-center">
+        <p>&copy; 2024 Train Booking | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

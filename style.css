@@ -37,11 +37,7 @@ body {
         color: #000;
     }
 } 
- #hero{
-   
-    background-size: cover;
-    background-position: center;
-} 
+
 #Search {
     color: black;
 }
@@ -52,9 +48,7 @@ input#Search{
 input#Search:focus {
     box-shadow: 0 0 10px rgba(59,130,246,0.7);
 }
-#hero-section {
-    padding-top: 8rem;
-}
+
 form input {
     transition: box-shadow 0.3s ease-in-out transform 0.3s;
 
@@ -124,47 +118,8 @@ button .spinner {
 
 .background{
   background-image: url(./images/Designer\ 2.jpeg);
-  height: 3000 px;
+  height: 3000px;
   
-
-}
-
-.back{
-  font-size:xxx-large;
-  font-style:inherit;
-  font-family:monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  
-  text-align: center;
-  
-}
-
-.back {
-  background: url('path/to/your/background-image.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  height: 100vh;
-}
-
-
-.login-container {
-  background-color: rgba(223, 232, 247, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  width: 40%;
-  margin: auto;
-  text-align: center;
-}
-
-.header {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: bold;
 }
 
 .input-group {
@@ -188,77 +143,11 @@ input {
   margin: 10px 10px;
 }
 
-.login-button {
-  background-color: #ff4500;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
 
-.login-button:hover {
-  background-color: #3d5aab;
-}
-.text{
-  font-size:x-large;
-  font-style: inherit;
-  font-family: monospace;
-  font-display:inherit;
-  font-variant: inherit;
-  
-}
-.password{
-  font-size: x-large;
-}
-@media (max-width: 768px) {
-  .login-container {
-      width: 90%;
-      padding: 15px;
-  }
-  .header {
-      font-size: 28px;
-  }
-
-}
 a{
   color: white;
   
 }
-.otp-inputs{
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-}
-.otp-box{
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius:  5px;
-}
-  .otp-box:focus{
-    border-color:#007bff;
-    outline: none;
-  }
-  .otp{
-    font-size:x-large;
-  font-style: inherit;
-  font-family: monospace;
-  font-display:inherit;
-  font-variant: inherit;
-  text-align: center;
-  
-  }
- 
-
-
-
-
-
-
 
 .cta-btn {
     padding: 15px 25px;
@@ -268,12 +157,17 @@ a{
     cursor: pointer;
     font-size: 1rem;
     border-radius: 5px;
+    will-change: transform,background-color;
 }
 .cta-btn:hover{
   background-color: #4d87bc;
   transform: scale(1.05);
 }
-
+@media (max-width: 768px) {
+  #destination-search {
+      width: 90%; /* Full width on mobile */
+  }
+}
 .search-bar {
     text-align: center;
     margin: 40px 0;
@@ -281,19 +175,16 @@ a{
 }
 
 #destination-search {
-    width: 60%;
+    width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    margin-right: 10px;
     margin: 10 px;
-    padding: 10px;
+    
 }
 
 .search-bar button {
     padding: 12px 20px;
-    background-color: #FF6F00;
+   
     color: white;
     font-size: 1rem;
     border: none;
@@ -304,8 +195,11 @@ a{
 .featured-destinations,
 .tour-packages {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 40px 0;
+    gap:20px;
+    
+
 }
 
 .destination-card,
@@ -316,6 +210,8 @@ a{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 30%;
+    margin:10px;
+    box-sizing: border-box;
 }
 
 .destination-card img,
@@ -337,35 +233,19 @@ a{
     color: #555;
 }
 .deals-banner {
-  background-color: #379777;
+
   text-align: center;
   padding: 30px;
 }
 .deals-banner button {
-  background-color: #ff5722;
+ 
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
-.deals-banner button:hover{
-  background-color: #4d87bc;
-}
 
-.deco{
-  text-align: center;
-  text-transform: capitalize; 
-  background-color: #bed195cc;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(199, 54, 54, 0.3);
-  padding: 20px;
-  width: 40%;
-  margin: auto;
-  text-align: center;
-  
-  
-}
 .card{
   display: flex;
   flex-wrap: wrap;
@@ -399,14 +279,8 @@ ul{
   list-style-type: disc;
   padding-left: 20px;
 }
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1.2rem;
-    }
-}
+
+
 form button:focus, .cta-btn:focus, .deals-banner button:focus {
     outline: 3px solid #FF6F00;
 }
@@ -420,4 +294,197 @@ form button:focus, .cta-btn:focus, .deals-banner button:focus {
         flex-direction: column;
     }
 }
+/* Example media query */
+
+
+/* For medium screens (tablet size) */
+@media (max-width: 1024px) {
+  .destination-card,
+  .package-card {
+      width: 45%; /* Make each card take up half the space */
+  }
+}
+/* Base styles for heading and destination box */
+#hero-section h1 {
+  font-size: 2.5rem; /* Default for smaller screens */
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+#hero-section p {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.destination-box {
+  position: absolute; /* Default positioning */
+  bottom: 20px;
+  left: 20px;
+  margin: 0 auto;
+  width: 90%; 
+  max-width: 400px;
+  padding: 20px;
+ 
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+@media (min-width: 768px) {
+  .destination-box {
+    width: 70%; /* More space for larger screens */
+    padding: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .destination-box {
+    width: 50%; /* Even larger for desktops */
+    padding: 30px;
+  }
+}
+
+#hero-section {
+  display: flex;
+  flex-direction: column; /* Default for smaller screens */
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (min-width: 1024px) {
+  #hero-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left; /* For larger screens */
+  }
+}
+
+
+.destination-box input[type="text"],
+.destination-box input[type="date"],
+.destination-box button {
+  width: 100%; 
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .destination-box input[type="text"],
+  .destination-box input[type="date"],
+  .destination-box button {
+    width: calc(33.33% - 10px); /* Adjusted for medium screens */
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .destination-box input[type="text"],
+  .destination-box input[type="date"],
+  .destination-box button {
+    width: calc(30% - 10px); /* Adjusted for larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-destinations,
+  .tour-packages {
+      flex-direction: column; /* Stack the cards vertically */
+      align-items: center;
+      gap: 20px; 
+  }
+  
+  .destination-card,
+  .package-card {
+      width: 80%; 
+  }
+}
+.destination-box input[type="text"],
+.destination-box input[type="date"],
+
+
+.destination-box button {
+  width: 100%; /* Full width for small screens */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.destination-box button:hover {
+  background-color: #f59e0b;
+}
+
+/* Media query for tablets (min-width: 640px) */
+@media (min-width: 640px) {
+  .destination-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 600px;
+  }
+
+  .destination-box input[type="text"],
+  .destination-box input[type="date"],
+  .destination-box button {
+    flex: 1 1 calc(33.33% - 10px); /* Elements take 1/3 of the width with space */
+    max-width: none;
+  }
+}
+
+/* Media query for desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .destination-box {
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .destination-box input[type="text"],
+  .destination-box input[type="date"],
+  .destination-box button {
+    flex: 1 1 calc(30% - 10px); /* Slightly smaller for better spacing */
+  }
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .destination-box {
+    width: 60%; /* Adjust for medium screens */
+    padding: 15px;
+  }
+}
+
+
+
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.animate-slideIn {
+  animation: slideIn 1s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
 

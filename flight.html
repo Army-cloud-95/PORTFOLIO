@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Flight Search Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="  container mx-auto text-center items-center justify-center">
+            <h1 class="text-3xl font-semibold mb-4">Find Your Flight</h1>
+            <div class="flex flex-wrap justify-center items-center">
+            <form class="  max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-xl  items-center ml-5 mr-5 justify-center">
+                <div class="grid grid-cols-1 md:grid-cols-3 md:p-5 gap-6 ">
+                    <!-- Departure & Arrival Airports -->
+                    <div>
+                        <label for="departure" class="block font-medium text-gray-700">Departure</label>
+                        <input type="text" id="departure" class="w-full p-3 mt-2 border border-gray-300 rounded-md" placeholder="City, Airport">
+                    </div>
+
+                    <div>
+                        <label for="arrival" class="block font-medium text-gray-700">Arrival</label>
+                        <input type="text" id="arrival" class="w-full p-3 mt-2 border border-gray-300 rounded-md" placeholder="City, Airport">
+                    </div>
+
+                    <!-- Date & Passengers -->
+                    <div>
+                        <label for="date" class="block font-medium text-gray-700">Departure Date</label>
+                        <input type="date" id="date" class="w-full p-3 mt-2 border border-gray-300 rounded-md">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <label for="passengers" class="block font-medium text-gray-700">Passengers</label>
+                        <input type="number" id="passengers" class="w-full p-3 mt-2 border border-gray-300 rounded-md" placeholder="Number of Passengers">
+                    </div>
+                    <div>
+                        <label for="class" class="block font-medium text-black">Class</label>
+                        <select id="class" class="w-full p-3 mt-2 border border-gray-300 rounded-md">
+                            <option value="economy">Economy</option>
+                            <option value="business">Business</option>
+                            <option value="first">First Class</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded-md text-lg hover:bg-blue-700">Search Flights</button>
+                </div>
+            
+            </form>
+        </div>
+        </div>
+    </section>
+
+    <!-- Flight Results Section -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-center mb-6 ">Available Flights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Flight Card -->
+                <div class="bg-white shadow-xl rounded-xl p-4 hover:scale-105 ml-5 mr-5">
+                    <h3 class="text-xl font-semibold mb-2">Flight to Paris</h3>
+                    <p class="text-gray-600">Airline: Air France</p>
+                    <p class="text-gray-600">Departure: 10:00 AM | Arrival: 1:00 PM</p>
+                    <p class="text-gray-600">Duration: 3 hours</p>
+                    <p class="font-semibold text-blue-600 mt-4">$450</p>
+                    <button class="mt-4 w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-700">Book Now</button>
+                </div>
+
+                <!-- Flight Card -->
+                <div class="bg-white shadow-xl rounded-xl p-4 hover:scale-105 ml-5 mr-5">
+                    <h3 class="text-xl font-semibold mb-2">Flight to Tokyo</h3>
+                    <p class="text-gray-600">Airline: Japan Airlines</p>
+                    <p class="text-gray-600">Departure: 11:00 AM | Arrival: 5:00 PM</p>
+                    <p class="text-gray-600">Duration: 7 hours</p>
+                    <p class="font-semibold text-blue-600 mt-4">$850</p>
+                    <button class="mt-4 w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-700">Book Now</button>
+                </div>
+
+                <!-- Flight Card -->
+                <div class="bg-white shadow-xl rounded-xl ml-5 mr-5 p-4 hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Flight to New York</h3>
+                    <p class="text-gray-600">Airline: Delta Airlines</p>
+                    <p class="text-gray-600">Departure: 12:00 PM | Arrival: 4:00 PM</p>
+                    <p class="text-gray-600">Duration: 4 hours</p>
+                    <p class="font-semibold text-blue-600 mt-4">$300</p>
+                    <button class="mt-4 w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-700">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-500 text-white py-6 text-center">
+        <p>&copy; 2024 Flight Booking | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>

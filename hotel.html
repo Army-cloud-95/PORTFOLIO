@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100 text-gray-900">
+
+    <!-- Header Section -->
+    <header class="bg-blue-500 text-white p-5 flex justify-between items-center">
+        <div class="text-2xl font-bold">
+            <h1>Hotel Paradise</h1>
+        </div>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#rooms" class="hover:text-gray-300">Rooms</a></li>
+                <li><a href="#services" class="hover:text-gray-300">Services</a></li>
+                <li><a href="./contact.html" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-96 bg-cover bg-center" style="background-image: url('');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative text-center text-white top-1/2 transform -translate-y-1/2">
+            <h2 class="text-4xl font-bold">Welcome to Hotel Paradise</h2>
+            <p class="mt-2 text-xl">Your perfect getaway starts here!</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white flex flex-wrap justify-center  items-center">
+        <div class="  max-w-6xl mx-auto px-6 text-center shadow-2xl rounded-2xl ml-5 mr-5 hover:scale-105 bg-cover">
+            <h2 class="text-3xl font-semibold text-blue-500">About Us</h2>
+            <p class="mt-4 text-lg text-gray-700">Hotel Paradise is a luxurious retreat offering world-class amenities for your comfort and relaxation. Located in the heart of the city, our hotel combines modern elegance with classic style.</p>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 text-center ">
+            <h2 class="text-3xl font-semibold text-blue-500">Our Rooms</h2>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ">
+                <div class="bg-white p-6 text-center shadow-2xl rounded-2xl ml-5 mr-5 hover:scale-105">
+                    <h3 class="text-xl font-semibold">Standard Room</h3>
+                    <p class="mt-2 text-gray-600">Comfortable and cozy, ideal for a solo traveler or couple.</p>
+                </div>
+                <div class="bg-white p-6 text-center shadow-2xl rounded-2xl ml-5 mr-5 hover:scale-105">
+                    <h3 class="text-xl font-semibold">Deluxe Room</h3>
+                    <p class="mt-2 text-gray-600">Spacious and luxurious, with a beautiful view of the city.</p>
+                </div>
+                <div class="bg-white p-6 text-center shadow-2xl rounded-2xl ml-5 mr-5 hover:scale-105">
+                    <h3 class="text-xl font-semibold">Suite</h3>
+                    <p class="mt-2 text-gray-600">The ultimate in luxury, featuring a private balcony and full amenities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold text-blue-500">Our Services</h2>
+            <ul class="mt-8 space-y-4 text-lg text-gray-700">
+                <li>24/7 Room Service</li>
+                <li>Spa & Wellness Center</li>
+                <li>Free Wi-Fi</li>
+                <li>Swimming Pool</li>
+                <li>Fitness Center</li>
+                <li>Airport Shuttle</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold text-blue-500">Contact Us</h2>
+            <form action="#" method="POST" class="mt-8 space-y-4">
+                <label for="name" class="block text-left text-lg text-gray-700">Name:</label>
+                <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                <label for="email" class="block text-left text-lg text-gray-700">Email:</label>
+                <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                <label for="message" class="block text-left text-lg text-gray-700">Message:</label>
+                <textarea id="message" name="message" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+                <button type="submit" class="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-500 text-white py-6 text-center">
+        <p>&copy; 2024 Hotel Paradise | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

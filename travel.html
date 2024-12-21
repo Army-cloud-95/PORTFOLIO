@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Page</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-white text-gray-900">
+
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-black p-5 flex justify-between items-center">
+        <div class="text-2xl font-bold">
+            <h1>Travel Adventures</h1>
+        </div>
+        <nav class="bg-blue-600 ">
+            <ul class="flex space-x-6 text-xl font-semibold">
+                <li><a href="./index.html" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#destinations" class="hover:text-gray-300">Destinations</a></li>
+                <li><a href="#deals" class="hover:text-gray-300">Deals</a></li>
+                <li><a href="./contact.html" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-96 bg-cover bg-center " >
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative text-center text-white top-1/2 transform -translate-y-1/2">
+            <h2 class="text-4xl font-bold">Explore the World with Us</h2>
+            <p class="mt-2 text-xl">Discover exciting destinations, amazing deals, and unforgettable experiences.</p>
+        </div>
+    </section>
+
+    <!-- Featured Destinations Section -->
+    <section class="featured-destinations bg-white ">
+        
+        <h2 class="font-semibold text-3xl px-3 i flex justify-start  text-blue-600 items-center hover:text-blue-700">Featured Destinations</h2>
+        
+        <div class="destination-card m-6 p-6 hover:shadow-xl transform hover:scale-105 transition duration-300">
+           <img src="./images/iceland.jpg" alt="ice land">
+           <h3 class="hover:text-blue-400 ">Iceland</h3>
+           <p class="hover:text-blue-500">"A land of majestic waterfalls, striking glaciers, and the enchanting Northern Lights."</p>
+           <button class="cta-btn bg-blue-500 hover:bg-blue-700">Explore More</button>
+        </div>
+        <div class="destination-card m-6  p-6 hover:shadow-xl transform hover:scale-105 transition duration-300">
+           <img src="./images/korea2.webp" alt="south-korea">
+           <h3 class="hover:text-blue-400">South Korea</h3>
+           <p class="hover:text-blue-500">"South Korea: A vibrant blend of ancient palaces, modern cities, and breathtaking mountain landscapes ."</p>
+           <button class="cta-btn bg-blue-500 hover:bg-blue-700">Explore More</button>
+        </div>
+        <div class="destination-card m-6 p-6 hover:shadow-xl transform hover:scale-105 transition duration-300">
+           <img src="./images/japan.jpg" alt="Tokyo">
+           <h3 class="hover:text-blue-400">Tokyo</h3>
+           <p class="hover:text-blue-500">"Tokyo: A dazzling metropolis where cutting-edge technology meets rich tradition and timeless culture."</p>
+           <button class="cta-btn bg-blue-500 hover:bg-blue-700">Explore More</button>
+        </div>
+        </section>
+
+    <!-- Special Deals Section -->
+    <section id="deals" class=" bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center ">
+            <h2 class="text-3xl font-semibold text-blue-600 hover:bg-blue-700">Special Travel Deals</h2>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 m-6 p-6 ">
+                <div class="bg-white  rounded-xl shadow-2xl hover:scale-105 transition duration-300 m-6 p-6">
+                    <h3 class="text-xl font-semibold">50% Off on Flights to Europe</h3>
+                    <p class="mt-2 text-gray-600">Book your flight to Europe now and save big!</p>
+                    <button class="mt-4 py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Book Now</button>
+                </div>
+                <div class="bg-white  shadow-2xl hover:scale-105 transition duration-300 m-6 p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold">Free Hotel Stay with Tour Package</h3>
+                    <p class="mt-2 text-gray-600">Enjoy a free hotel stay when you book our exclusive tour packages.</p>
+                    <button class="mt-4 py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Learn More</button>
+                </div>
+                <div class="bg-white  rounded-xl shadow-2xl hover:scale-105 transition duration-300 m-6 p-6 ">
+                    <h3 class="text-xl font-semibold">Family Vacation Packages</h3>
+                    <p class="mt-2 text-gray-600">Special discounts for family vacations to top destinations.</p>
+                    <button class="mt-4 py-2 px-4 bg-blue-600 text-white hover:bg-blue-700">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold text-blue-600">Contact Us</h2>
+            <form action="#" method="POST" class="mt-8 space-y-6">
+                <label for="name" class="block text-left text-lg text-gray-700">Name:</label>
+                <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+                <label for="email" class="block text-left text-lg text-gray-700">Email:</label>
+                <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+                <label for="message" class="block text-left text-lg text-gray-700">Message:</label>
+                <textarea id="message" name="message" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+
+                <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-600 text-white py-6 text-center">
+        <p>&copy; 2024 Travel Adventures | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
